@@ -25,7 +25,7 @@ export function* fetchCollectionsAsync() {
   }
 }
 
-export function* fetchCollectionsStart() {
+export function* onFetchCollectionsStart() {
   // takeEvery creates a non-blocking call
   yield takeLatest(
     ShopActionTypes.FETCH_COLLECTIONS_START,
