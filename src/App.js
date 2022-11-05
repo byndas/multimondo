@@ -1,30 +1,104 @@
+import "./categories.styles.scss";
+import CategoryItem from "./components/category-item/category-item.component";
+
 const App = () => {
 
+  const categories = [
+{
+      id: 1,
+      title: 'hats',
+      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+    },
+    {
+      id: 2,
+      title: 'jackets',
+      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+    },
+    {
+      id: 3,
+      title: 'sneakers',
+      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+    },
+    {
+      id: 4,
+      title: 'womens',
+      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+    },
+    {
+      id: 5,
+      title: 'mens',
+      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+    },
 
+
+    // {
+    //   id: 3,
+    //   title: "prints",
+    //   imageUrl: 'assets/images/img1.jpg'
+
+    // },
+    // {
+    //   id: 4,
+    //   title: "shirts",
+    //   imageUrl: 'assets/images/img2.jpg'
+      
+    // },
+    // {
+    //   id: 5,
+    //   title: "tote bags",
+    //   imageUrl: 'assets/images/img3.jpg'
+      
+    // }
+    {
+      id: 6,
+      title: "print 1",
+      imageUrl: 'assets/prints/print1.jpg'
+
+    },
+    {
+      id: 7,
+      title: "print 2",
+      imageUrl: 'assets/prints/print2.jpg'
+      
+    },
+    {
+      id: 8,
+      title: "print 3",
+      imageUrl: 'assets/prints/print3.jpg'
+      
+    },
+    {
+      id: 9,
+      title: "print 4",
+      imageUrl: 'assets/prints/print4.jpg'
+
+    },
+    {
+      id: 10,
+      title: "print 5",
+      imageUrl: 'assets/prints/print5.jpg'
+      
+    },
+    {
+      id: 11,
+      title: "print 6",
+      imageUrl: 'assets/prints/print6.jpg'
+      
+    },
+    {
+      id: 12,
+      title: "print 7",
+      imageUrl: 'assets/prints/print7.jpg'
+
+    },
+  ];
   
   return (
     <div className='categories-container'>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Prints</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Shirts</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Tote Bags</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
+      {categories.map((category) => (
+
+      <CategoryItem key={category.id} category={category} />
+      ))}
     </div>
   );
 };
