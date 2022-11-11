@@ -1,31 +1,15 @@
-import "./categories.styles.scss";
-import CategoryItem from "./components/category-item/category-item.component";
+import Directory from "./directory/directory.component";
 
 const App = () => {
 
   const categories = [
-{
+    {
       id: 1,
-      title: 'hats',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
-    },
-    {
-      id: 2,
-      title: 'jackets',
-      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
-    },
-    {
-      id: 3,
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-    },
-    {
-      id: 4,
       title: 'womens',
       imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
     },
     {
-      id: 5,
+      id: 2,
       title: 'mens',
       imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
     },
@@ -50,43 +34,43 @@ const App = () => {
       
     // }
     {
-      id: 6,
+      id: 3,
       title: "print 1",
       imageUrl: 'assets/prints/print1.jpg'
 
     },
     {
-      id: 7,
+      id: 4,
       title: "print 2",
       imageUrl: 'assets/prints/print2.jpg'
       
     },
     {
-      id: 8,
+      id: 5,
       title: "print 3",
       imageUrl: 'assets/prints/print3.jpg'
       
     },
     {
-      id: 9,
+      id: 6,
       title: "print 4",
       imageUrl: 'assets/prints/print4.jpg'
 
     },
     {
-      id: 10,
+      id: 7,
       title: "print 5",
       imageUrl: 'assets/prints/print5.jpg'
       
     },
     {
-      id: 11,
+      id: 8,
       title: "print 6",
       imageUrl: 'assets/prints/print6.jpg'
       
     },
     {
-      id: 12,
+      id: 9,
       title: "print 7",
       imageUrl: 'assets/prints/print7.jpg'
 
@@ -94,12 +78,7 @@ const App = () => {
   ];
   
   return (
-    <div className='categories-container'>
-      {categories.map((category) => (
-
-      <CategoryItem key={category.id} category={category} />
-      ))}
-    </div>
+    <Directory categories={categories} />
   );
 };
 
